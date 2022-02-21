@@ -2,7 +2,7 @@
 <view class="home">
   <swiper class="banner" autoplay="{{autoplay}}" circular="{{true}}" indicator-dots="{{true}}">
     <swiper-item wx:for="{{banner}}" wx:key="index">
-      <view class="swiper-item" data-id="{{item.goodId}}" onTap="goDetail">
+      <view class="swiper-item" data-id="{{item.goodId}}" bindtap="goDetail">
         <image class="swiper-image" mode="aspectFit" src="{{item.image}}"></image>
       </view>
     </swiper-item>

@@ -1,1 +1,18 @@
 /* pages/my/index.wxss */
+.wrapper{
+  padding-top: 60rpx;
+}
+.avatar{
+  display: block;
+  width: 170rpx;
+  height: 170rpx;
+  margin: 0 auto 20rpx;
+  border-radius: 50%;
+}
+.userName{
+  margin: 0 auto 20rpx;
+  text-align: center;
+  line-height: 36rpx;
+  font-size: 28rpx;
+  color: #000;
+}

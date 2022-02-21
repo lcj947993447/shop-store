@@ -13,7 +13,15 @@ App({
         traceUser: true,
       });
     }
-
-    this.globalData = {};
+    const globalData = {}
+    const openid = wx.getStorageSync('openid')
+    if(openid){
+      globalData.openid = openid
+    }
+    const userInfo = wx.getStorageSync('userInfo')
+    if(userInfo){
+      globalData.userInfo = userInfo
+    }
+    this.globalData = globalData;
   }
 });
