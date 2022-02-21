@@ -1,0 +1,23 @@
+<!-- pages/home/index.wxml -->
+<view class="home">
+  <swiper class="banner" autoplay="{{autoplay}}" circular="{{true}}" indicator-dots="{{true}}">
+    <swiper-item wx:for="{{banner}}" wx:key="index">
+      <view class="swiper-item" data-id="{{item.goodId}}" onTap="goDetail">
+        <image class="swiper-image" mode="aspectFit" src="{{item.image}}"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="goods">
+    <view class="title">最新上架</view>
+    <view class="list">
+      <view class="item" wx:for="{{banner}}" wx:key="index">
+        <image class="goods-image" mode="scaleToFill" src="{{item.image}}"></image>
+        <view class="info">
+          <view class="name ellipsis-mult">{{item.goodId}}</view>
+          <view class="price">¥ 1000</view>
+        </view>
+      </view>
+    </view>
+    <view class="all-goods">查看全部商品</view>
+  </view>
+</view>
