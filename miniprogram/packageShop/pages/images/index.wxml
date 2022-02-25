@@ -1,0 +1,11 @@
+<!-- packageShop/pages/images/index.wxml -->
+<view class="wrap">
+  <view class="title">图片管理</view>
+  <view class="image-list">
+    <view class="image-item" wx:for="{{images}}" wx:key="index">
+      <image src="{{item}}" />
+      <text class="icon iconfont icon-del"></text>
+    </view>
+  </view>
+  <view class="add-image">上传图片</view>
+</view>

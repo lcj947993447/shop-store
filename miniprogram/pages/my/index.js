@@ -11,19 +11,23 @@ Page({
     orderType: [
       {
         name:'待付款',
-        code: 'WAIT_PAY'
+        code: 'WAIT_PAY',
+        icon: 'icon-daifukuan'
       },
       {
         name:'待发货',
-        code: 'WAIT_DELIVERY'
+        code: 'WAIT_DELIVERY',
+        icon: 'icon-daifahuo'
       },
       {
         name:'待收货',
-        code: 'PARTIAL_SHIPPED'
+        code: 'PARTIAL_SHIPPED',
+        icon: 'icon-yifahuo'
       },
       {
         name:'已完成',
-        code: 'COMPLETED'
+        code: 'COMPLETED',
+        icon: 'icon-yiwancheng'
       }
     ]
   },
@@ -84,5 +88,9 @@ Page({
         }
       }
     })
+  },
+  goShopManage(){
+    const url = '/packageShop/pages/index/index'
+    wx.navigateTo({ url })
   }
 })

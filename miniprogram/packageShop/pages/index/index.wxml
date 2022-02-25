@@ -1,0 +1,9 @@
+<!-- packageShop/pages/index/index.wxml -->
+<view class="wrap">
+  <view class="title">商城管理</view>
+  <view class="ability-list">
+    <view class="ability-item" wx:for="{{ability}}" wx:key="index" data-path="{{item.path}}" bindtap="goList">
+      {{item.text}}
+    </view>
+  </view>
+</view>

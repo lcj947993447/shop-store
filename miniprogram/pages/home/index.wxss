@@ -16,7 +16,8 @@
 }
 
 .goods{
-  padding: 0 25rpx 40rpx;
+  padding: 20rpx 25rpx 40rpx;
+  border-top: 10rpx solid #f6f6f6;
 }
 .goods .title{
   display: flex;
@@ -53,7 +54,7 @@
   height: 60rpx;
   margin: 0 auto;
   border-radius: 60rpx;
-  font-size: 32rpx;
+  font-size: 30rpx;
   color: #000;
   text-align: center;
   line-height: 60rpx;

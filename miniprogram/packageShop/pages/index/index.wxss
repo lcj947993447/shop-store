@@ -1,0 +1,25 @@
+/* packageShop/pages/index/index.wxss */
+.wrap{
+  padding-top: 60rpx;
+}
+.wrap .title{
+  font-size: 40rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.ability-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 40rpx;
+}
+
+.ability-item{
+  width: 311rpx;
+  height: 80rpx;
+  border: 2rpx solid #333;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

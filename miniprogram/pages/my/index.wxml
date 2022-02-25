@@ -1,5 +1,5 @@
 <!-- pages/my/index.wxml -->
-<view class="wrapper">
+<view class="wrap wrapper">
   <view class="userinfo">
     <block wx:if="{{userInfo}}">
       <image class="avatar" src="{{userInfo.avatarUrl}}" />
@@ -13,8 +13,28 @@
     </block>
     <view class="userName" wx:else bindtap="getOpenId">登录/注册</view>
   </view>
-  <view class="order">
-    <view class="title">我的订单</view>
-    <view class="order-type"></view>
+  <view class="content order">
+    <view class="title">
+      <text>订单</text>
+      <view class="all-order link-line">全部订单</view>
+    </view>
+    <view class="order-type">
+      <view class="type-item" wx:for="{{orderType}}" wx:key="code">
+        <view class="icon iconfont {{item.icon}}"></view>
+        <view class="text">{{item.name}}</view>
+      </view>
+    </view>
   </view>
+  <view class="content ability">
+    <view class="title">
+      <text>常用功能</text>
+    </view>
+    <view class="ability-list">
+      <view class="ability-item" bindtap="goShopManage">
+        <view class="icon iconfont icon-edit"></view>
+        <view class="text">商城管理</view>
+      </view>
+    </view>
+  </view>
+  <tab-bar selected="{{3}}"></tab-bar>
 </view>

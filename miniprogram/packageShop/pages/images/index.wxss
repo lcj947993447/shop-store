@@ -1,0 +1,4 @@
+/* packageShop/pages/images/index.wxss */
+.wrap{
+  padding: 40rpx 0;
+}

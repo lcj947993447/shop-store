@@ -1,0 +1,5 @@
+<!-- pages/goods/index.wxml -->
+<view class="wrapper">
+  <text>pages/goods/index.wxml</text>
+  <tab-bar selected="{{1}}"></tab-bar>
+</view>

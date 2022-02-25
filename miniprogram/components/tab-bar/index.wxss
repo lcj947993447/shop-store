@@ -1,0 +1,30 @@
+/* custom-tab-bar/index.wxss */
+@import "/static/iconfont/iconfont.wxss";
+.tab-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: white;
+  border-top: 1px solid #dfdfdf;
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.tab-bar-item{
+  width: 25%;
+  padding-top: 8px;
+  text-align: center;
+  color: #999999;
+  font-size: 12px;
+}
+.tab-bar-item.active{
+  color: #000;
+}
+.tab-bar-item .icon{
+  font-size: 20px;
+  margin-bottom: 2px;
+}

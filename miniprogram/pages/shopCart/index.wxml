@@ -1,2 +1,5 @@
-<!--pages/shopCart/index.wxml-->
-<text>pages/shopCart/index.wxml</text>
+<!-- pages/shopCart/index.wxml -->
+<view class="wrapper">
+  <text>pages/shopCart/index.wxml</text>
+  <tab-bar selected="{{2}}"></tab-bar>
+</view>

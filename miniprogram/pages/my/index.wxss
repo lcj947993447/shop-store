@@ -1,6 +1,10 @@
 /* pages/my/index.wxss */
-.wrapper{
-  padding-top: 60rpx;
+page{
+  background-color: #f6f6f6;
+}
+
+.userinfo{
+  padding-top: 20rpx;
 }
 .avatar{
   display: block;
@@ -10,9 +14,43 @@
   border-radius: 50%;
 }
 .userName{
-  margin: 0 auto 20rpx;
+  margin: 0 auto;
   text-align: center;
   line-height: 36rpx;
   font-size: 28rpx;
   color: #000;
+}
+
+.content{
+  margin: 20rpx;
+  margin-bottom: 30rpx;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.content .title{
+  font-size: 30rpx;
+  margin-bottom: 26rpx;
+}
+.all-order{
+  color: #666;
+  font-size: 24rpx;
+}
+.order .title,.order .order-type,.ability .ability-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.order .order-type,.ability .ability-list{
+  margin: 0 60rpx;
+}
+.content .icon{
+  font-size: 46rpx;
+  margin-bottom: 8rpx;
+}
+.content .text{
+  font-size: 24rpx;
 }
