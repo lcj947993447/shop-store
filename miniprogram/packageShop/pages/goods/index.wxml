@@ -1,2 +1,14 @@
-<!--packageShop/pages/goods/index.wxml-->
-<text>packageShop/pages/goods/index.wxml</text>
+<!-- packageShop/pages/goods/index.wxml -->
+<view class="wrap">
+  <view class="title">商品管理</view>
+  <view class="list">
+    <view class="item" wx:for="{{banner}}" wx:key="index">
+      <image class="goods-image" mode="scaleToFill" src="{{item.image}}"></image>
+      <view class="info">
+        <view class="name ellipsis-mult">{{item.goodId}}</view>
+        <view class="price">¥ 1000</view>
+      </view>
+    </view>
+  </view>
+  <view class="next-goods button">查看更多商品</view>
+</view>

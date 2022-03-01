@@ -14,6 +14,7 @@
       "pages": [
         "pages/index/index",
         "pages/indexEdit/index",
+        "pages/classify/index",
         "pages/goods/index",
         "pages/goodsEdit/index",
         "pages/images/index",

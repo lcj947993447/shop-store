@@ -3,9 +3,11 @@
   <view class="title">图片管理</view>
   <view class="image-list">
     <view class="image-item" wx:for="{{images}}" wx:key="index">
-      <image src="{{item}}" />
-      <text class="icon iconfont icon-del"></text>
+      <image class="image" src="{{item}}" mode="widthFix" />
+      <view class="icon-wrap">
+        <view class="icon iconfont icon-del"></view>
+      </view>
     </view>
   </view>
-  <view class="add-image">上传图片</view>
+  <!-- <view class="add-image button" bindtap="upload">上传图片</view> -->
 </view>

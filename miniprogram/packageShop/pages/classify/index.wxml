@@ -1,0 +1,13 @@
+<!-- packageShop/pages/classify/index.wxml -->
+<view class="wrap">
+  <view class="title">商品分类管理</view>
+  <view class="classify-list">
+    <view class="classify-item" wx:for="{{classify}}" wx:key="index">
+      <view class="classify-name">{{item.type}}</view>
+      <view class="icon-wrap" data-id="{{item._id}}" bindtap="delClassify">
+        <view class="icon iconfont icon-del"></view>
+      </view>
+    </view>
+  </view>
+  <view class="button" bindtap="addClassify">新增分类</view>
+</view>

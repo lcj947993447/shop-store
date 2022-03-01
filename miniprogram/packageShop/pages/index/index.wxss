@@ -2,7 +2,7 @@
 .wrap{
   padding-top: 60rpx;
 }
-.wrap .title{
+.wrap>.title{
   font-size: 40rpx;
   text-align: center;
   margin-bottom: 40rpx;
@@ -11,7 +11,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 40rpx;
 }
 
 .ability-item{

@@ -1,1 +1,23 @@
 /* packageShop/pages/goods/index.wxss */
+.goods .list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.goods .item{
+  width: 345rpx;
+  margin-bottom: 20rpx;
+}
+.item .goods-image{
+  width: 345rpx;
+  height: 345rpx;
+  margin-bottom: 10rpx;
+}
+.item .info .name,.item .info .price{
+  height: 64rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
+}
+.item .info .name{
+  height: 64rpx;
+}

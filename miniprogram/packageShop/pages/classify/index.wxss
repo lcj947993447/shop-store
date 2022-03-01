@@ -1,0 +1,33 @@
+/* packageShop/pages/classify/index.wxss */
+.classify-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.classify-item{
+  position: relative;
+  width: 250rpx;
+  padding-right: 60rpx;
+  height: 80rpx;
+  border: 2rpx solid #333;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.classify-name{
+  width: 230rpx;
+  margin: 0 10rpx;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.icon-wrap{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 60rpx;
+  height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
