@@ -2,13 +2,12 @@
 <view class="wrap">
   <view class="title">商品管理</view>
   <view class="list">
-    <view class="item" wx:for="{{banner}}" wx:key="index">
-      <image class="goods-image" mode="scaleToFill" src="{{item.image}}"></image>
+    <view class="item" wx:for="{{goods}}" wx:key="index">
+      <image class="goods-image" mode="scaleToFill" src="{{item.image[0]}}" bindtap="editGoods" data-id="{{item._id}}"></image>
       <view class="info">
-        <view class="name ellipsis-mult">{{item.goodId}}</view>
-        <view class="price">¥ 1000</view>
+        <view class="name ellipsis-mult">{{item.name}}</view>
+        <view class="price">¥ {{item.price}}</view>
       </view>
     </view>
   </view>
-  <view class="next-goods button">查看更多商品</view>
 </view>

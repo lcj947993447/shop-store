@@ -17,6 +17,12 @@
           "pathName": "packageShop/pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "packageShop/pages/goodsEdit/index",
+          "pathName": "packageShop/pages/goodsEdit/index",
+          "query": "id=617ef50c621c37aa08ccc0f15ebf55c4",
+          "scene": null
         }
       ]
     }

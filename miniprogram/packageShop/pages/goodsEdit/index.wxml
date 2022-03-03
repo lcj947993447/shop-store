@@ -1,2 +1,30 @@
-<!--packageShop/pages/goodsDetail/index.wxml-->
-<text>packageShop/pages/goodsDetail/index.wxml</text>
+<!-- packageShop/pages/goodsDetail/index.wxml -->
+<view class="wrap">
+  <view class="title">商品编辑</view>
+  <view class="edit-title">图片</view>
+  <view class="edit image-edit">
+    <view class="image-item" wx:for="{{goodsDetail.image}}" wx:key="index">
+      <image class="image" mode="widthFix" src="{{item}}" />
+      <view class="icon iconfont icon-close" data-index="{{index}}" bindtap="removeImage"></view>
+    </view>
+    <view class="image-item icon-wrap" bindtap="uploadImage">
+      <view class="add-icon iconfont icon-image"></view>
+      <view class="upload-text">上传图片</view>
+    </view>
+  </view>
+  <view class="edit classify-edit">
+    <picker mode="selector" bindchange="classifyChange" value="{{classifyIndex}}" range="{{classify}}" range-key="type">
+      <view class="classify-picker">
+        <view>分类：{{classify[classifyIndex].type}}</view>
+        <view class="icon iconfont icon-arrow-right"></view>
+      </view>
+    </picker>
+  </view>
+  <view class="edit name-edit">
+    <view class="edit-title">名称</view>
+  </view>
+  <view class="edit price-edit">
+    <view class="edit-title">价格</view>
+  </view>
+  <view class="submit">保存</view>
+</view>

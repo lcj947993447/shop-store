@@ -1,10 +1,10 @@
 /* packageShop/pages/goods/index.wxss */
-.goods .list{
+.list{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.goods .item{
+.item{
   width: 345rpx;
   margin-bottom: 20rpx;
 }

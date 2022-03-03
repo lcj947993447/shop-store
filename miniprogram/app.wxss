@@ -50,6 +50,18 @@ page {
   line-height: 60rpx;
   border: 2rpx solid #000;
 }
+.submit{
+  width: 300rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #f8f8f8;
+  border: 2rpx solid #9b9b9b;
+}
 
 .wrap{
   padding: 40rpx 20rpx;

@@ -1,1 +1,41 @@
 /* packageShop/pages/goodsDetail/index.wxss */
+.edit-title{
+  font-size: 28rpx;
+}
+
+.image-edit{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+.image-item{
+  position: relative;
+  width: 345rpx;
+  height: 345rpx;
+  margin-bottom: 16rpx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.image-item .image{
+  width: 100%;
+}
+.image-item .icon{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32rpx;
+  height: 32rpx;
+  font-size: 32rpx;
+}
+.icon-wrap{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.add-icon{
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
