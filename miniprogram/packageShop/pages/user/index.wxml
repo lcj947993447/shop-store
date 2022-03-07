@@ -1,2 +1,16 @@
-<!--packageShop/pages/user/index.wxml-->
-<text>packageShop/pages/user/index.wxml</text>
+<!-- packageShop/pages/user/index.wxml -->
+<view class="wrap">
+  <view class="title">用户管理</view>
+  <view class="list">
+    <view class="item" wx:for="{{userList}}" wx:key="index">
+      <view class="left">
+        <image class="avatar" src="{{item.avatarUrl}}" mode="scaleToFill" />
+      </view>
+      <view class="right">
+        <view class="name">{{item.nickName}}</view>
+        <!-- <view class="name">消费金额：{{item.totalPrice}}</view> -->
+        <view class="detail" bindtap="userDetail" data-openId="{{item.openId}}">用户详情</view>
+      </view>
+    </view>
+  </view>
+</view>

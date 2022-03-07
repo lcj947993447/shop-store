@@ -1,2 +1,12 @@
-<!--packageShop/pages/order/index.wxml-->
-<text>packageShop/pages/order/index.wxml</text>
+<!-- packageShop/pages/order/index.wxml -->
+<view class="wrap">
+  <view class="title">订单管理</view>
+</view>
+<view class="tab">
+  <view class="item"></view>
+</view>
+<view class="wrap">
+  <view class="list">
+    <view class="item"></view>
+  </view>
+</view>

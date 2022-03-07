@@ -1,4 +1,12 @@
 // packageShop/pages/order/index.js
+const ORDER_STATUS_TEXT = {
+  WAIT_PAY: '待付款',
+  WAIT_DELIVERY: '待发货',
+  WAIT_EXAMINE: '待审核',
+  WAIT_RECEIVE: '待收货',
+  COMPLETED: '已完成',
+}
+
 Page({
 
   /**
