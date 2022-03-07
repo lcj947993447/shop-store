@@ -10,7 +10,9 @@ Page({
       classify: '',
       image: [],
       name: '',
-      price: 0
+      price: 0,
+      inventory: 0,
+      status: false
     },
     classify: [],
     classifyIndex: 0
@@ -105,11 +107,66 @@ Page({
   },
   classifyChange(e){
     const classifyIndex = e.detail.value
-    const goodsDetail = this.data.goodsDetail
-    goodsDetail.classify = this.data.classify[classifyIndex]._id
     this.setData({
-      classifyIndex,
+      classifyIndex
+    })
+    this.goodsDetailChange('classify', this.data.classify[classifyIndex]._id)
+  },
+  nameChange(e){
+    const {value} = e.detail
+    this.goodsDetailChange('name', value)
+  },
+  priceChange(e){
+    const {value} = e.detail
+    this.goodsDetailChange('price', value)
+  },
+  inventoryChange(e){
+    const {value} = e.detail
+    this.goodsDetailChange('inventory', value)
+  },
+  statusChange(e){
+    const {value} = e.detail
+    this.goodsDetailChange('status', value)
+  },
+  goodsDetailChange(key, value){
+    const goodsDetail = this.data.goodsDetail
+    goodsDetail[key] = value
+    this.setData({
       goodsDetail
     })
+  },
+  submit(){
+    const goodsDetail = this.data.goodsDetail
+    let type = ''
+    if(goodsDetail._id){
+      type = 'editGoods'
+    }else{
+      type = 'addGoods'
+    }
+    wx.cloud.callFunction({
+      name: 'goodsFunctions',
+      data: {
+        type,
+        ...goodsDetail
+      }
+    }).then((resp) => {
+      showToast('编辑成功')
+    }).catch((e) => {
+      console.log('catch', e);
+    });
+  },
+  delGoods(e){
+    const {id} = e.currentTarget.dataset
+    wx.cloud.callFunction({
+      name: 'goodsFunctions',
+      data: {
+        type: 'delGoods',
+        id
+      }
+    }).then((resp) => {
+      wx.navigateBack({})
+    }).catch((e) => {
+      console.log('catch', e);
+    });
   }
 })

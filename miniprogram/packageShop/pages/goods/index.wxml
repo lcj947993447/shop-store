@@ -1,6 +1,9 @@
 <!-- packageShop/pages/goods/index.wxml -->
 <view class="wrap">
-  <view class="title">商品管理</view>
+  <view class="title">
+    <text>商品管理</text>
+    <view class="add-goods" bindtap="addGoods">+新增商品</view>
+  </view>
   <view class="list">
     <view class="item" wx:for="{{goods}}" wx:key="index">
       <image class="goods-image" mode="scaleToFill" src="{{item.image[0]}}" bindtap="editGoods" data-id="{{item._id}}"></image>

@@ -21,3 +21,13 @@
 .item .info .name{
   height: 64rpx;
 }
+
+.title{
+  position: relative;
+}
+.add-goods{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24rpx;
+}

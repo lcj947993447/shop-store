@@ -61,5 +61,10 @@ Page({
     wx.navigateTo({
       url: `/packageShop/pages/goodsEdit/index?id=${id}`
     })
+  },
+  addGoods(){
+    wx.navigateTo({
+      url: `/packageShop/pages/goodsEdit/index`
+    })
   }
 })
