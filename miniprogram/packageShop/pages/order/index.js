@@ -1,11 +1,28 @@
 // packageShop/pages/order/index.js
-const ORDER_STATUS_TEXT = {
-  WAIT_PAY: '待付款',
-  WAIT_DELIVERY: '待发货',
-  WAIT_EXAMINE: '待审核',
-  WAIT_RECEIVE: '待收货',
-  COMPLETED: '已完成',
-}
+import {showToast, showLoading} from '../../../util/util.js'
+const ORDER_STATUS = [
+  {
+    code: 'WAIT_EXAMINE',
+    name: '待审核'
+  },
+  {
+    code: 'WAIT_PAY',
+    name: '待付款'
+  },
+  {
+    code: 'WAIT_DELIVERY',
+    name: '待发货'
+  },
+  {
+    code: 'WAIT_RECEIVE',
+    name: '待收货'
+  },
+  {
+    code: 'COMPLETED',
+    name: '已完成'
+  }
+]
+const PAGE_NUMBER = 10
 
 Page({
 
@@ -13,62 +30,58 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    orderStatus: ORDER_STATUS,
+    code: 'WAIT_EXAMINE',
+    orderList: [],
+    pageNext: true,
+    page: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.init()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  init(){
+    showLoading()
+    const {code, page} = this.data
+    wx.cloud.callFunction({
+      name: 'orderFunctions',
+      data: {
+        type: 'getOrder',
+        page,
+        code 
+      }
+    }).then((resp) => {
+      console.log(resp, 'resp')
+      const list = resp.result.data
+      if(list.length === PAGE_NUMBER){
+        this.setData({
+          pageNext: true,
+          page: page + 1
+        })
+      }else{
+        this.setData({pageNext: false})
+      }
+      const orderList = [].concat(this.data.orderList, list)
+      this.setData({
+        orderList
+      })
+      wx.hideLoading();
+    }).catch((e) => {
+      console.log('catch', e);
+      wx.hideLoading();
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  statusChange(e){
+    const {code} = e.currentTarget.dataset
+    this.setData({
+      code,
+      orderList: [],
+      pageNext: true,
+      page: 0
+    })
+    this.init()
   }
 })

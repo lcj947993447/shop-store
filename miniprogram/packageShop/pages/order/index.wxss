@@ -1,1 +1,26 @@
 /* packageShop/pages/order/index.wxss */
+.wrap{
+  padding: 40rpx 0;
+}
+
+.tab{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70rpx;
+  background-color: #f6f6f6;
+  font-size: 28rpx;
+}
+.tab .item{
+  height: 68rpx;
+  line-height: 68rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+.tab .item.active{
+  border-bottom: 2rpx solid #333;
+}
+
+.list-none{
+  padding:  100rpx 0;
+  text-align: center;
+}

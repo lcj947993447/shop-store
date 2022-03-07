@@ -1,12 +1,13 @@
 <!-- packageShop/pages/order/index.wxml -->
 <view class="wrap">
   <view class="title">订单管理</view>
-</view>
-<view class="tab">
-  <view class="item"></view>
-</view>
-<view class="wrap">
-  <view class="list">
+  <view class="tab">
+    <view class="item {{item.code === code ? 'active' : ''}}" wx:for="{{orderStatus}}" wx:key="index" data-code="{{item.code}}" bindtap="statusChange">
+      {{item.name}}
+    </view>
+  </view>
+  <view class="list" wx:if="{{orderList.length > 0}}">
     <view class="item"></view>
   </view>
+  <view class="list-none" wx:else>暂无相关订单</view>
 </view>
