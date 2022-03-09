@@ -19,9 +19,9 @@
           "scene": null
         },
         {
-          "name": "packageShop/pages/goodsEdit/index",
-          "pathName": "packageShop/pages/goodsEdit/index",
-          "query": "id=617ef50c621c37aa08ccc0f15ebf55c4",
+          "name": "packageShop/pages/orderEdit/index",
+          "pathName": "packageShop/pages/orderEdit/index",
+          "query": "id=54ad1eea6225ac8f14bc483a35488195",
           "scene": null
         }
       ]

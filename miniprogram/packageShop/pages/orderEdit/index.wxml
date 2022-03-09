@@ -1,2 +1,4 @@
-<!--packageShop/pages/orderDetail/index.wxml-->
-<text>packageShop/pages/orderDetail/index.wxml</text>
+<!-- packageShop/pages/orderDetail/index.wxml -->
+<view class="wrap">
+  <view class="title">订单详情</view>
+</view>

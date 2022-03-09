@@ -83,5 +83,20 @@ Page({
       page: 0
     })
     this.init()
+  },
+  onReachBottom(){
+    // 没有下一页了
+    if(!this.data.pageNext){
+      console.log('pageNext: false')
+      showToast('没有更多了')
+      return
+    }
+    this.init()
+  },
+  goOrderDetail(e){
+    const {id} = e.currentTarget.dataset
+    wx.navigateTo({
+      url: `/packageShop/pages/orderEdit/index?id=${id}`
+    })
   }
 })

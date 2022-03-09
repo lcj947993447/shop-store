@@ -7,7 +7,18 @@
     </view>
   </view>
   <view class="list" wx:if="{{orderList.length > 0}}">
-    <view class="item"></view>
+    <view class="item" wx:for="{{orderList}}" wx:key="index">
+      <view class="order-id">订单号：{{item.id}}</view>
+      <scroll-view scroll-x="true" class="image-wrap">
+        <view class="image-item" wx:for="{{item.goods}}" wx:for-index="idx" wx:key="idx" wx:for-item="itemGoods">
+          <image class="image" src="{{itemGoods.image}}" mode="scaleToFill" />
+        </view>
+      </scroll-view>
+      <view class="content">
+        <view class="price">￥{{item.totalPrice}}</view>
+        <view class="detail-btn btn" bindtap="goOrderDetail" data-id="{{item._id}}">查看详情</view>
+      </view>
+    </view>
   </view>
   <view class="list-none" wx:else>暂无相关订单</view>
 </view>

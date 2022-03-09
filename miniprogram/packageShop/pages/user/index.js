@@ -1,5 +1,5 @@
 // packageShop/pages/user/index.js
-import {showLoading} from '../../../util/util.js'
+import {trim, showLoading} from '../../../util/util.js'
 Page({
 
   /**
@@ -34,6 +34,35 @@ Page({
     });
   },
   userDetail(e){
-
+    const {id} = e.currentTarget.dataset
+  },
+  editRemark(e){
+    const that = this
+    const {id} = e.currentTarget.dataset
+    wx.showModal({
+      title: '修改备注',
+      showCancel: true,
+      editable: true,
+      placeholderText: '请输入备注',
+      success(res){
+        if (res.confirm) {
+          const remark = res.content
+          showLoading()
+          wx.cloud.callFunction({
+            name: 'userFunctions',
+            data: {
+              type: 'editUser',
+              _id: id,
+              remark
+            }
+          }).then((resp) => {
+            wx.hideLoading();
+            that.init()
+          }).catch((e) => {
+            wx.hideLoading();
+          });
+        }
+      }
+    })
   }
 })

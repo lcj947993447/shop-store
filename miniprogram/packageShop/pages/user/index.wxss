@@ -34,3 +34,6 @@
   text-align: center;
   line-height: 60rpx;
 }
+.right .icon{
+  margin-left: 20rpx;
+}

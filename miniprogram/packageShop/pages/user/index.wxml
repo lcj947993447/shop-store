@@ -7,9 +7,15 @@
         <image class="avatar" src="{{item.avatarUrl}}" mode="scaleToFill" />
       </view>
       <view class="right">
-        <view class="name">{{item.nickName}}</view>
+        <view class="info">
+          <view class="name">{{item.nickName}}</view>
+          <view class="name">
+            备注：{{item.remark}}
+            <text class="icon iconfont icon-bianji" bindtap="editRemark" data-id="{{item._id}}"></text>
+          </view>
+        </view>
         <!-- <view class="name">消费金额：{{item.totalPrice}}</view> -->
-        <view class="detail" bindtap="userDetail" data-openId="{{item.openId}}">用户详情</view>
+        <view class="detail" bindtap="userDetail" data-id="{{item._id}}">用户详情</view>
       </view>
     </view>
   </view>
